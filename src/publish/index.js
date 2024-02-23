@@ -283,7 +283,7 @@ export const publish = async (options) => {
               )
               /** @type {any} */
               const data = await res.json()
-              username = data.items[0]?.login
+              username = data?.items[0]?.login || ''
             }
 
             const scope = commit.parsed.scope ? `${commit.parsed.scope}: ` : ''
